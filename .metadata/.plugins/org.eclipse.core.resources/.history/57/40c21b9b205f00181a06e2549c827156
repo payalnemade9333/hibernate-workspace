@@ -1,0 +1,64 @@
+package SampleProject;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+public class LogicTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AnnotationConfiguration cfg = new AnnotationConfiguration();
+		cfg.configure();
+		SessionFactory sessionFactory = cfg.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		
+		Admin a1 = new Admin();
+		a1.setName("paya");
+		//a1.setAid(1);
+		
+		Project p1 = new Project();
+		p1.setProjecttitle("hibernate project");
+		
+		Project p2 = new Project();
+		p2.setProjecttitle("java project");
+		
+		Set s1 = new HashSet();
+		s1.add(p1);
+		s1.add(p2);
+		a1.setProject(s1);
+		
+		Milestone m1 = new Milestone();
+		m1.setMilestonetask("Bugtracker");
+		
+		Milestone m2 = new Milestone();
+		m2.setMilestonetask("minor bug");
+		
+		Milestone m3 = new Milestone();
+		m3.setMilestonetask("major bug");
+		
+		Milestone m4 = new Milestone();
+		m4.setMilestonetask("small bug");
+		
+		Set s2 = new HashSet();
+		s2.add(m1);
+		s2.add(m2);
+		p1.setMilestone(s2);
+		
+		Set s3 = new HashSet();
+		s3.add(m3);
+		s3.add(m4);
+		p1.setMilestone(s3);
+	//	a1.setProject(s2);
+		Transaction t = session.beginTransaction();
+		session.save(a1);
+		t.commit();
+		session.close();
+		System.out.println("Done..!!!!!!");
+	}
+
+}

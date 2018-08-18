@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.MobileHotspot">
+ 
+ <class name="Hotspot" table="hotspot">	
+ 	
+ 	<property name="security" column="Security"></property>
+ 	<property name="password" column="Password"></property>
+ 	
+ <!-- 	<property name="networkName" column="Network_name" insert="false"></property> -->
+ 	
+ 	<many-to-one name="MHObject" column="networkName" class="Mobile" cascade="all"></many-to-one>
+ 	
+ </class>
+ </hibernate-mapping>

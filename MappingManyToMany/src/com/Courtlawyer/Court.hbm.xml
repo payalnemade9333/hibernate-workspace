@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping package="com.Courtlawyer">
+<class name="Court" table="Court">
+ 
+	<id name="courtno" column="court_no" />
+	 
+	<property name="block" column="Court_block" />
+	<property name="name" column="Court_Name" />
+	 
+	<set name="lawyer" inverse="false" cascade="all" table="court_lawyer">
+		<key column="courtno" />
+		<many-to-many class="lawyer" column="lawyerid"/>
+	</set>
+ 
+</class>
+ 
+</hibernate-mapping>

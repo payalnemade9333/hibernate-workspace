@@ -1,0 +1,189 @@
+package com.Restrictions;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
+import com.MainClass.SessionFactoryDemo;
+import com.products.ProductsData;
+import com.products.ProductsDto;
+
+	public class selectAllRecords {
+			static Session session = SessionFactoryDemo.getSession();
+				public static void select() {
+				Criteria cr = session.createCriteria(ProductsDto.class);
+				cr.setFirstResult(3);
+				cr.setMaxResults(5);
+				List list = cr.list();
+				Iterator itr = list.iterator();
+				ProductsDto dto;
+				while(itr.hasNext())
+				{
+					dto = (ProductsDto)itr.next();
+					System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+				}
+	}
+		public static void getLessThan() {
+				Criteria cr = session.createCriteria(ProductsDto.class);
+				cr.add(Restrictions.lt("price", 50000));
+				List list = cr.list();
+				Iterator itr = list.iterator();
+				ProductsDto dto;
+				while(itr.hasNext())
+				{
+					dto = (ProductsDto)itr.next();
+					System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+				}
+		}
+		public static void getGreaterthan() {
+			 	Criteria cr = session.createCriteria(ProductsDto.class);
+				cr.add(Restrictions.gt("price", 20));
+				List list = cr.list();
+				Iterator itr = list.iterator();
+				ProductsDto dto;
+				while(itr.hasNext())
+				{
+					dto = (ProductsDto)itr.next();
+					System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+				}
+		}
+		public static void getBetween()
+		{
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.between("price",1500,50000));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		public static void getIn()
+		{
+			Criteria cr = session.createCriteria(ProductsDto.class);
+	//		cr.add(Restrictions.in("price", new Object[] {12,35, 75}));
+			cr.add(Restrictions.in("pname", new Object[] {"mi", "bulb"}));
+	//		cr.add(Restrictions.in("pname", new String[] {"samsung", "bulb"}));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		public static void getLike() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.like("pname", "s%"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+			
+		}
+		
+		public static void getILike() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.ilike("pname", "SO%"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+			
+		}
+		
+		public static void isNull() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.isNull("ptype"));
+		//	cr.add(Restrictions.isNull("pname"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		public static void isNotNull() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.isNotNull("pname"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		/*public static void isEmptyNull() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.isEmpty("ptype"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		
+		public static void isEmptyNotNull() {
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.isNotEmpty("ptype"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}*/
+		public static void getANDLogicalExpression()
+		{
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.eq("pname", "socket"));
+			cr.add(Restrictions.eq("ptype", "electric"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		
+		public static void geORLogicalExpression()
+		{
+			Criteria cr = session.createCriteria(ProductsDto.class);
+			cr.add(Restrictions.or(Restrictions.eq("ptype", "mobile"), Restrictions.eq("pname", "mi")));
+		//	cr.add(Restrictions.eq("ptype", "electric"));
+			List list = cr.list();
+			Iterator itr = list.iterator();
+			ProductsDto dto;
+			while(itr.hasNext())
+			{
+				dto = (ProductsDto)itr.next();
+				System.out.println(dto.getPid()+" \t"+dto.getPname()+"\t "+dto.getPtype()+"\t "+dto.getQuantity()+"\t "+dto.getPrice());
+			}
+		}
+		
+}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.OneToMany"> 
+ <class name="Customer" table="customer">
+ 		<id name="customerId" column="customer_Id"></id>
+ 		<property name="customerName" column="customer_Name"></property>
+ 		<property name="forevenId" column="forevenId" insert="false"></property>	 			
+ </class>
+ </hibernate-mapping>

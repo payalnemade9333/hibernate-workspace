@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+"F:/Hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/annotationmapping</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">root</property>
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	
+	<property name="hbm2ddl.auto">create</property>
+	<property name="show_sql">true</property>
+	
+	<!--  <mapping class="CustomersVendor.Customers"/>
+	<mapping class="CustomersVendor.Vendor"/> 
+	
+	  <mapping class="ManyToOne.Customers"/>
+	<mapping class="ManyToOne.Vendor"/>	-->
+	
+<!--	<mapping class="ManyToMany.Categories"/>
+	<mapping class="ManyToMany.Items"/>
+	
+ 	<mapping class="OneToOne.Address"/>
+	<mapping class="OneToOne.Student"/> 
+	
+	<mapping class="OneToMany.Customers"/>
+	<mapping class="OneToMany.Vendor"/>	-->
+	
+	<mapping class="InheritanceMapping.Payment"/>
+	<mapping class="InheritanceMapping.ChequePayment"/>
+	<mapping class="InheritanceMapping.CreditCardPayment"/>
+	
+</session-factory>
+</hibernate-configuration>      

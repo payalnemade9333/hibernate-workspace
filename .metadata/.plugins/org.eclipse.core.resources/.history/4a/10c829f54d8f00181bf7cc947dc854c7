@@ -1,0 +1,44 @@
+package com.SecondLevels;
+
+
+import com.FirstLevels.EmployeeDto;
+
+public class TestSecond {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+			Configuration cfg=new Configuration().configure();
+			SessionFactory factory=cfg.buildSessionFactory();
+				
+				Session session1 = factory.openSession();
+				System.out.println("Session first: ");
+				for(int i=0; i<=10; i++)
+				{
+				EmployeeDto emp1 = (EmployeeDto)session1.load(EmployeeDto.class, 4);
+				Thread.sleep(3000);
+				System.out.println(emp1.getId()+" "+emp1.getName()+" "+emp1.getSalary());
+				}
+				session1.close();
+				
+				Session session2=factory.openSession();
+				System.out.println("Session Second: ");
+				for(int i=0; i<=10; i++)
+				{
+				EmployeeDto emp2=(EmployeeDto)session2.load(EmployeeDto.class,4);
+				Thread.sleep(3000);
+				System.out.println(emp2.getId()+" "+emp2.getName()+" "+emp2.getSalary());
+				}
+				session2.close();
+				
+				Session session3 = factory.openSession();
+				System.out.println("Session Third: ");
+				for(int i=0; i<=10; i++)
+				{
+					EmployeeDto emp3 = (EmployeeDto)session3.load(EmployeeDto.class, 4);
+					Thread.sleep(3000);
+					System.out.println(emp3.getId()+" "+emp3.getName()+" "+emp3.getSalary());
+				}
+				session3.close();
+	}
+}
+

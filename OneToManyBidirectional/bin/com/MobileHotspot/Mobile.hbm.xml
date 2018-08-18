@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.MobileHotspot">
+ <class name="Mobile" table="Mobile">
+ 
+ 	<property name="modelNo" column="ModelNo"></property>
+ 	<property name="mobileNo" column="MobileNo"/>
+ 	<property name="networkName" column="NetWorkName"></property>
+ 	
+ 	<set name="branch" cascade="all" inverse="true">
+ 		<key column="networkName"></key>
+ 		<one-to-many class="Hotspot"/>
+ 	</set>
+ </class>
+ </hibernate-mapping>

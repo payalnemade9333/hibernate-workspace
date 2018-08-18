@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:\Hybernate\hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.mypackage">
+ <class name="Customer" table = "customer">
+ 
+ <id name="cust_id" column="id">
+ <generator class="increment"></generator>
+ </id> 
+ 
+  <property name="cName" column="cust_name"></property>
+   <property name="address" column="address"></property>
+    <property name="city" column="city"></property>
+     <property name="state" column="state"></property>
+      <property name="pincode" column="pincode"></property>
+ </class>
+ 
+ </hibernate-mapping>

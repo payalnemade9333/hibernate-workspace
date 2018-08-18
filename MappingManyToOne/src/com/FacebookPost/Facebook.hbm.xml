@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ <hibernate-mapping package="com.FacebookPost">
+ <class name="Facebook">
+ 	<id name="fbid" column="facebook_id"></id>
+ 	<property name="fbusername" column="Fb_user_name"></property>
+ 	
+ 	<many-to-one name="ParentObject" column="facebookid" class="Post" cascade="all"></many-to-one>
+ </class>
+ </hibernate-mapping>

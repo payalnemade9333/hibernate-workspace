@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.products">
+ 
+<class name="ProductsDto" table="Products">
+	<id name="pid" column="Product_id">
+		<generator class="increment"></generator>
+	</id>
+	<property name="pname" column="Product_name"></property>
+	<property name="ptype" column="Product_type"></property>
+	<property name="quantity" column="Quantity"></property>
+	<property name="price" column="Price"></property>
+	
+</class>
+ </hibernate-mapping>

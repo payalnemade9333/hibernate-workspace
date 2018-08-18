@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd"> 
+ 
+ <hibernate-mapping package="com.ConcreteClassHirarchy">
+<class name="Payment2" table="payment2">
+
+<id name="paymentid" column="paymentid"></id>
+<property name="amount" column="amount"></property>
+
+<union-subclass name="CreditCard2">
+<property name="creditcardtype" column="cctype" length="10"></property>
+</union-subclass>
+
+<union-subclass name="Cheque2">
+<property name="chequetype" column="cqtype" length="10"></property>
+</union-subclass>
+
+</class>
+</hibernate-mapping>

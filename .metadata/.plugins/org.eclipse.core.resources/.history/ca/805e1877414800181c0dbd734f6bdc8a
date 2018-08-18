@@ -1,0 +1,53 @@
+package com.Restrictions;
+
+import com.order.OrderByClause;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		System.out.println("----------------------------------------------------SELECT QUERY--------------------------------------------------");
+		selectAllRecords.select();
+/*		
+		System.out.println("----------------------------------------------------LESS THAN QUERY------------------------------------------------");
+		selectAllRecords.getLessThan();
+		
+		System.out.println("-----------------------------------------------------GREATER THAN QUERY--------------------------------------------");
+		selectAllRecords.getGreaterthan();
+		
+		System.out.println("------------------------------------------------------BETWEEN QUERY------------------------------------------------");
+		selectAllRecords.getBetween();
+
+		System.out.println("------------------------------------------------------IN QUERY------------------------------------------------------");
+		selectAllRecords.getIn();
+		
+		/*System.out.println("------------------------------------------------------LIKE QUERY------------------------------------------------");
+		selectAllRecords.getLike();
+		
+		System.out.println("------------------------------------------------------I LIKE QUERY------------------------------------------------");
+		selectAllRecords.getILike();
+		
+		System.out.println("------------------------------------------------------IS NULL QUERY------------------------------------------------");
+		selectAllRecords.isNull();
+		
+		System.out.println("------------------------------------------------------ISNOT NULL QUERY------------------------------------------------");
+		selectAllRecords.isNotNull();
+		
+		System.out.println("------------------------------------------------------ISEMPTY NULL QUERY------------------------------------------------");
+		selectAllRecords.isEmptyNull();
+		
+		System.out.println("------------------------------------------------------ISNOTEMPTY NULL QUERY------------------------------------------------");
+		selectAllRecords.isEmptyNotNull();
+		
+		System.out.println("------------------------------------------------------AND LOGICAL EXPRESSION QUERY------------------------------------------------");
+		selectAllRecords.getANDLogicalExpression();
+		
+		System.out.println("------------------------------------------------------OR LOGICAL EXPRESSION QUERY------------------------------------------------");
+		selectAllRecords.geORLogicalExpression();
+		
+		System.out.println("------------------------------------------------------ORDERBY QUERY------------------------------------------------");
+		OrderByClause.getOrder();*/
+	}
+
+}

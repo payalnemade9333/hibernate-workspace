@@ -1,0 +1,39 @@
+package SampleProject;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="milestone")
+public class Milestone {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="uid")
+	private Integer uid;
+	
+	@Column(name="username")
+	private String username;
+	
+	@Column(name="description")
+	private String description;
+	
+	public Integer getMid() {
+		return mid;
+	}
+
+	public void setMid(Integer mid) {
+		this.mid = mid;
+	}
+
+	public String getMilestonetask() {
+		return milestonetask;
+	}
+
+	public void setMilestonetask(String milestonetask) {
+		this.milestonetask = milestonetask;
+	}
+}

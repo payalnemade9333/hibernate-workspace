@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.Payal">
+<class name="userDto" table="users">
+<id name="id" column="ID">
+	<generator class="increment" />
+</id>
+
+<property name="firstName"></property>
+<property name="lastName"></property>
+
+</class>
+
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+package SampleProject;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Project")
+public class Project {
+			@Id
+			@Column(name="pid")
+			private Integer aid;
+			
+			@Column(name="Project Title")
+			private String projecttitle;
+
+			@OneToMany(targetEntity=Milestone.class, cascade=CascadeType.ALL)
+			@JoinColumn(name="Milestone_id", referencedColumnName="pid")
+			private Set milestone;
+			
+			
+			
+}

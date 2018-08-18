@@ -1,0 +1,20 @@
+package SampleProject;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="milestone")
+public class Milestone {
+	@Id
+	@Column(name="mid")
+	private Integer mid;
+	
+	@Column(name="Milestone task")
+	private String milestonetask;
+	
+	
+
+}

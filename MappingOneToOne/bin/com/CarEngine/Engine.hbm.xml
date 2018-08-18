@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.CarEngine">
+
+    <class name="Engine" table="engine">
+    
+        <id name="carid" column="carid">
+        
+        	<generator class="foreign">
+        		<param name="property">car</param>
+        	</generator>
+        </id>
+        <property name="engno"></property>
+        <property name="gearbox" column="gearbox" />
+        <one-to-one name="car" class="Car" cascade="all"></one-to-one>
+ </class> 
+</hibernate-mapping> 

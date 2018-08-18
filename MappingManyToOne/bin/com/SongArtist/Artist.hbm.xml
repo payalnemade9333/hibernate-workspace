@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.SongArtist">
+ <class name="Artist" table="Artist">
+ 	
+ 	<id name="artistId" column="artist_id"></id>
+ 	<property name="artistName" column="Artist_Name"></property>
+ 	<property name="artistExp" column="Artist_ex"></property>
+ 	
+ 	<many-to-one name="Object" column="Song_id" class="Song" cascade="all"></many-to-one>
+ 	
+ </class>
+ </hibernate-mapping>

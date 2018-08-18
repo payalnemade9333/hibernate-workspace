@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">
+ 
+ <hibernate-mapping package="com.FilterExample1">
+ <class name="Employee" table="employee" schema="filter">
+ 	<id name="id" column="Employee id">
+ 		<generator class="increment"></generator>
+ 	</id>
+ 	<property name="name" column="Employee Name"></property>
+ 	<property name="salary" column="Salary"></property>
+ 	<property name="city" column="City"></property>
+ 	<property name="age" column="Age"></property>
+ 	
+ 	<filter name="name" condition="name like 's%' AND salary >= 5000"></filter>
+ <!-- 	<filter name="salaryFilter" condition="salary >= :salary"></filter> -->
+</class>
+	<!--  <filter-def name="salaryFilter">
+	 <filter-param name="salary" type="int"/>
+ </filter-def> -->
+ </hibernate-mapping>

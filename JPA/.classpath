@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/hibernate-commons-annotations-4.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/hibernate-core-4.2.21.Final.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/javassist.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/jboss-logging-3.1.1.GA.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/jms-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/jsr250-api-1.0.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/mysql-connector.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/hibernate4.2Anno/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/jars/JPA/hibernate-entitymanager-5.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/jars/JPA/javax.persistence.jar"/>
+	<classpathentry kind="lib" path="F:/jars/JPA/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

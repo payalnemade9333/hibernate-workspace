@@ -1,0 +1,29 @@
+package SampleProject;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Admin")
+public class Admin {
+	@Id
+	@Column(name="aid")
+	private Integer aid;
+	
+	@Column(name="Admin name")
+	private String name;
+	
+	@OneToMany(targetEntity=Project.class, cascade=CascadeType.ALL)
+	@JoinColumn(name="pro_id", referencedColumnName="aid")
+	private Set project;
+
+	
+}

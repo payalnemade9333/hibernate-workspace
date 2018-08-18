@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping package="com.ProductsManufacturers">
+<class name="Products" table="products">
+ 
+	<id name="productId" column="prodId" />
+
+	<property name="name" column="name"/>
+	<property name="cost" column=""/>
+ 
+	<set name="manufacture" inverse="false" cascade="all" table="Pro_manu">
+ 
+	<key column="product_Id"/>
+	<many-to-many class="Manufacturers" column="manufacture_Id" />
+ 
+	</set>
+</class>
+</hibernate-mapping>

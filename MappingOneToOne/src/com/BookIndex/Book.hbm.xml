@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+
+<hibernate-mapping package="com.BookIndex">
+
+    <class name="Book" table="book">
+        <id name="bookid" column="Book_id" />
+        <property name="name" column="Book_name" />
+        <property name="desc" column="Description"></property>
+    </class>
+    
+</hibernate-mapping>

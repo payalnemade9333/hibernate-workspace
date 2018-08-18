@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "F:/Hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/ManyToMany</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">root</property>
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	
+	<property name="hbm2ddl.auto">update</property>
+	<property name="show_sql">true</property>
+	
+	<mapping resource="com/StudentCourse/Student.hbm.xml"/>
+	<mapping resource="com/StudentCourse/Course.hbm.xml"/>
+	
+	<!-- <mapping resource="com/UserGroup/Users.hbm.xml"/>
+	<mapping resource="com/UserGroup/Groups.hbm.xml"/> -->
+	
+	<mapping resource="com/ApplicantInterviewer/Applicant.hbm.xml"/>
+	<mapping resource="com/ApplicantInterviewer/Interviewer.hbm.xml"/> 
+	
+	<mapping resource="com/ProductsManufacturers/Products.hbm.xml"/>
+	<mapping resource="com/ProductsManufacturers/Manufacturers.hbm.xml"/> 	
+	
+<!-- 	<mapping resource="com/StudentClasses/Classes.hbm.xml"/>
+	<mapping resource="com/StudentClasses/Student.hbm.xml"/> -->
+	
+	<mapping resource="com/Courtlawyer/Court.hbm.xml"/>
+	<mapping resource="com/Courtlawyer/lawyer.hbm.xml"/>
+	
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.TeacherCourse">
+	<class name="Course" table="Course">
+		<id name="courseId" column="Course_Id"></id>
+		
+		<property name="courseName" column="Course_Name"></property>
+		<property name="teacherName" column="Teacher_name"></property>
+		<property name="forTid" column="forTid" insert="false"></property>
+	
+	</class>
+ </hibernate-mapping>

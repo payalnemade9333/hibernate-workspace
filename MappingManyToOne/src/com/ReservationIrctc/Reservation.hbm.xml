@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.ReservationIrctc">
+ <class name="Reservation" table="reservation">
+ 	
+ 	<id name="reservationId" column="Reservation_id"></id>
+ 	<property name="passengerName" column="Passenger_Name"></property>
+ 	<property name="berth" column="Berth"></property>
+ 	<property name="date" column="Date"></property>
+ 	<property name="status" column="Status"></property>
+ 	
+ 	<many-to-one name="Object" column="Login_id" class="Irctc" cascade="all"></many-to-one>
+ 	
+ </class>
+ </hibernate-mapping>

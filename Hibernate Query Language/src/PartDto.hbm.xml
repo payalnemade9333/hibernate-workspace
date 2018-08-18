@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.payu">
+ 
+ <class name="PartDto" table="part">
+ 
+ <id name="id" column="id">
+ 	<generator class="increment"></generator>
+ </id>
+ 	<property name="name"></property>
+ 	<property name="age"></property>
+ 	<property name="salary"></property>
+ 	<property name="address"></property>
+ 		
+ </class>
+ <query name="allpart">
+ 		<![CDATA[from PartDto]]>
+ 	</query>
+ </hibernate-mapping>
+ 
+ 

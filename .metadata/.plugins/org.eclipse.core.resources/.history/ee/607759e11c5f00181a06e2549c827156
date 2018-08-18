@@ -1,0 +1,54 @@
+package SampleProject;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+public class LogicTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AnnotationConfiguration cfg = new AnnotationConfiguration();
+		cfg.configure();
+		SessionFactory sessionFactory = cfg.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		
+		Admin a1 = new Admin();
+		a1.setName("paya");
+		
+		Project p1 = new Project();
+		p1.setProjecttitle("hibernate project");
+		
+		Project p2 = new Project();
+		p2.setProjecttitle("java project");
+		
+		Project p3 = new Project();
+		p3.setProjecttitle("JPA project");
+		
+		Project p4 = new Project();
+		p4.setProjecttitle("spring project");
+		
+		Milestone m1 = new Milestone();
+		m1.setMilestonetask("Bugtracker");
+		
+		Set s = new HashSet();
+		s.add(p1);
+		s.add(p2);
+		a1.setProject(s);
+		
+		Set s2 = new HashSet();
+		s2.add(p3);
+		s2.add(p3);
+		a1.setProject(s2);
+		Transaction t = session.beginTransaction();
+		session.save(a1);
+		t.commit();
+		session.close();
+		System.out.println("Done..!!!!!!");
+	}
+
+}

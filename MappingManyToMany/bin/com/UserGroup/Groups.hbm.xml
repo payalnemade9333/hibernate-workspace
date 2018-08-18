@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping package="com.UserGroup">
+<class name="Groups" table="groups">
+ 
+	<id name="groupId" column="groupId" />
+	 
+	<property name="groupName" column="group_name" length="20"/>
+	<property name="strength" column="strength" />
+	 
+	<set name="users" inverse="true" cascade="all" table="User_Group">
+		<key column="groupId" />
+		<many-to-many class="Users" column="userId "/>
+	</set>
+ 
+</class>
+
+</hibernate-mapping>

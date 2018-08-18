@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.ReservationIrctc">
+ <class name="Irctc" table="irctc">
+ <id name="loginId" column="Login_id"></id>
+	 	
+	 	<property name="password" column="password_name"></property>
+ 	
+ </class>
+ </hibernate-mapping>

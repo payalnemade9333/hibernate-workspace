@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ <hibernate-mapping package="com.FacebookPost">
+ <class name="Post">
+	<id name="pid" column="Post_id"></id>
+	<property name="Date" column="post_Date"></property>
+	<property name="time" column="post_Time"></property>
+	<property name="type" column="Post_type"></property>
+ </class>
+ </hibernate-mapping>

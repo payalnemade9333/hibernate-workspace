@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.TeacherCourse">
+	<class name="Teacher" table="teacher">
+	
+		<id name="id" column="Teacher_Id"></id>
+		
+		<property name="name" column="Teacher_Name"></property>
+		<property name="course" column="Course"></property>
+		
+		<set name="child" cascade="all">
+			<key column="forTid" />
+			<one-to-many class="Course"/>
+		</set>
+	</class>
+ </hibernate-mapping>

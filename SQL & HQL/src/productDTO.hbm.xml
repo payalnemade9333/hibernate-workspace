@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.AggregateFunctions">
+<class name="ProductsDTO" table="Products">
+	<id name="product_id" column="Product_id">
+		<generator class="increment"></generator>
+	</id>
+	<property name="product_name"></property>
+	<property name="supplier_id"></property>
+	<property name="price"></property>
+	
+</class>
+ </hibernate-mapping>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;QueryByCritteria&apos; to &apos;QueryByCriteria&apos;&#x0D;&#x0A;- Original element: &apos;QueryByCritteria&apos;&#x0D;&#x0A;- Renamed element: &apos;QueryByCritteria&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;QueryByCritteria&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=QueryByCritteria" name="QueryByCriteria" references="true" stamp="1524479301330" version="1.0"/>
+</session>

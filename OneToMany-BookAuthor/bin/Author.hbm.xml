@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.BookAuthor">
+	<class name="Author" table="Author">
+		<id name="authorId" column="Auhtor_Id"></id>
+		<property name="fullName" column="FULLNAME"></property>
+		<property name="mobileno" column="MOBILENO"></property>
+		<property name="forBookId" column="forbookId" insert="false"></property>
+	
+	</class>
+ </hibernate-mapping>

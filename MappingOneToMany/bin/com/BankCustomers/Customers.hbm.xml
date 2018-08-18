@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ <hibernate-mapping package="com.BankCustomers">
+ <class name="Customers" table="customers">
+ 	
+	<id name="customerid" column="custId"></id>
+	<property name="firstname" column="first_name"></property>
+	<property name="lastname" column="last_name"></property>
+	<property name="birthdate" column="Birth_date"></property> 
+	<property name="phone" column="phoneno"></property>
+	<property name="forid" column="Bankid" insert="false"></property>
+ </class>
+ </hibernate-mapping>

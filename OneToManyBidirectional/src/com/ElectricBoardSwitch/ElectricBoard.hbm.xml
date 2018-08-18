@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.ElectricBoardSwitch">
+ <class name="ElectricBoard" table="Electric_Board">
+ 	<id name="productId" column="ProductId"></id>
+ 	<property name="size" column="Size"></property>
+ 	<property name="quality" column="Quality"></property>
+ 	<property name="company" column="Company"></property>
+ 	
+ 	<set name="child" cascade="all">
+ 		<key column="productId"></key>
+ 		<one-to-many class="Switch"/>
+ 	</set>
+ </class>
+ </hibernate-mapping>

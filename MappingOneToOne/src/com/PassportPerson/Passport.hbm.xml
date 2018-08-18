@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.PassportPerson">
+
+    <class name="Passport" table="passport">
+        <id name="passportNumber" column="ppno">
+        
+        	<generator class="foreign">
+        		<param name="property">person</param>
+        	</generator>
+        </id>
+        
+        <property name="issudDate" column="idate" />
+        <property name="expireDate" column="edate" />
+        <one-to-one name="person" class="Person" cascade="all"></one-to-one>
+ </class> 
+</hibernate-mapping> 

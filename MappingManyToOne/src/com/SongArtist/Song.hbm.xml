@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping package="com.SongArtist">
+ <class name="Song" table="Song">
+ <id name="songId" column="Song_id"></id>
+	 	
+	 	<property name="songName" column="password_name"></property>
+	 	<property name="songReleaseYear" column="song_Release_Year"></property>
+ 	
+ </class>
+ </hibernate-mapping>

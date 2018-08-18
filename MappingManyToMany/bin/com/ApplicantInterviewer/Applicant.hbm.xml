@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "F:/Hibernate/hibernate-mapping-3.0.dtd">  
+ 
+<hibernate-mapping package="com.ApplicantInterviewer">
+<class name="Applicant" table="applicant">
+ 
+	<id name="applicantId" column="applId" />
+ 
+	<property name="name" column="name"/>
+	<property name="resume"/>
+ 
+	<set name="interviewer" inverse="false" cascade="all" table="AI">
+		<key column="appli_Id"/>
+	<many-to-many class="Interviewer" column="interv_Id" />
+ 
+	</set>
+</class>
+</hibernate-mapping>
